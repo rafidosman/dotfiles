@@ -1,0 +1,155 @@
+/* global settings and color variables */
+* {
+   maincolor:        #1D1F28;
+   highlight:        bold #88C0D0;
+   urgentcolor:      #88C0D0;
+
+   fgwhite:          #FDFDFD;
+   blackdarkest:     #1D1F28;
+   blackwidget:      #1D1F28;
+   blackentry:       #1D1F28;
+   blackselect:      #1D1F28;
+   darkgray:         #1D1F28;
+   scrollbarcolor:   #1D1F28;
+   font: "SF Pro Display 11";
+   background-color: @blackdarkest;
+}
+
+window {
+   background-color: #75788b;
+   anchor: north west;
+   location: north west;
+   y-offset: 5%;
+   x-offset: 1.5%;
+   width: 300;
+   padding: 3px;
+   border-radius: 5px;
+}
+
+mainbox {
+   background-color: @blackdarkest;
+   spacing:0px;
+   
+   
+}
+
+message {
+   padding: 6px 10px;
+   background-color:@blackwidget;
+}
+
+textbox {
+   text-color:@darkgray;
+   background-color:@blackwidget;
+}
+
+listview {
+   fixed-height: false;
+   dynamic: true;
+   scrollbar: true;
+   spacing: 0px;
+   padding: 1px 0px 0px 0px;
+   margin: 0px 0px 1px 0px;
+   background: @blackdarkest;
+}
+
+element {
+   padding: 4px 10px;
+}
+
+element normal.normal {
+   padding: 0px 15px;
+   background-color: @blackentry;
+   text-color: @fgwhite;
+}
+
+element normal.urgent {
+   background-color: @blackentry;
+   text-color: @urgentcolor;
+}
+
+element normal.active {
+   background-color: @blackentry;
+   text-color: @maincolor;
+}
+
+element selected.normal {
+    background-color: @blackselect;
+    text-color:       #00FFFF;
+}
+
+element selected.urgent {
+    background-color: @urgentcolor;
+    text-color:       @blackdarkest;
+}
+
+element selected.active {
+    background-color: @blackdarkest;
+    text-color:       #00FFFF;
+}
+
+element alternate.normal {
+    background-color: @blackentry;
+    text-color:       @fgwhite;
+}
+
+element alternate.urgent {
+    background-color: @blackentry;
+    text-color:       @urgentcolor;
+}
+
+element alternate.active {
+    background-color: @blackentry;
+    text-color:       @maincolor;
+}
+
+scrollbar {
+   background-color: @blackwidget;
+   handle-color: @blackdarkest;
+   handle-width: 15px;
+}
+
+mode-switcher {
+   background-color: @blackwidget;
+}
+
+button {
+   background-color: @blackwidget;
+   text-color:       @darkgray;
+}
+
+button selected {
+    text-color:       @maincolor;
+}
+
+inputbar {
+   background-color: @blackdarkest;
+   spacing: 0px;
+   children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}
+
+prompt {
+   padding:0px 10px;
+   background-color: @blackwidget;
+   text-color: #00FFFF;
+}
+
+entry {
+   padding:0px 6px;
+   background-color:@blackwidget;
+   text-color:#D8DEE9;
+}
+
+case-indicator {
+   padding:6px 10px;
+   text-color:@maincolor;
+   background-color:@blackwidget;
+}
+#textbox-prompt-colon {
+	padding:0px 0px;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+    text-color: #8FBCBB;
+    background-color:@blackwidget;
+}
